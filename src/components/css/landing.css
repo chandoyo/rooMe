@@ -1,10 +1,32 @@
 #landing-text {
-    background-color: rgb(255,255,255,.5);
+    background-color: rgb(255,255,255,.7);
     text-align: center;
     background-position: center;
     font-family: 'Montserrat', sans-serif;
   
   }
+
+#title{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  /* color: #006A96; */
+  color: white;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+#triton-logo{
+  width: 5%;
+  height: 5%;
+}
+#wrap{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.logo{
+  background-image: url(./assets/triton-dark.png);
+}
 
 #landing-page{
   background-size: cover;
@@ -15,7 +37,7 @@
   display: flex;
   width: 100vw;  
   min-height: 100vh;
-  background: url('./assets/geisel.jpg') no-repeat center center fixed;
+  background: url('./assets/sio.jpg') no-repeat center center fixed;
   position: relative;
 }
 
@@ -40,5 +62,22 @@
   border-color: white;
   font-family: 'Montserrat', sans-serif;
 }
-  
+#test-custom-btn{
+  font-family: 'Montserrat', sans-serif;
+  border-color:  #006A96;
+  color:  #006A96;
+}
+
+#copyright{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: xx-small;
+    white-space: nowrap;
+}
+
+#box{
+  position: relative;
+}
   
