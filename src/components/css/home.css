@@ -49,7 +49,15 @@
 #bio, #about{
     font-family: 'Montserrat', sans-serif;
 }
-
+#roommates{
+    font-family: 'Montserrat', sans-serif;
+}
+.tab, #more-tab, #bio-tab{
+    color: white;
+}
+.tabLeft, .tabRight{
+    font-family: 'Montserrat', sans-serif;
+}
 .title{
     text-align: center;
     margin-top: -16%;
@@ -78,21 +86,30 @@
  
 
  #user-pic{
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     display: block;
     /* margin-left: auto;
     margin-right: auto; */
-    margin-top: 10%;
+    margin-top: 30%;
     border-radius: 50%;
-    float: left;
+    /* float: left; */
  }
  #username{
      float: right;
-     margin-top: 20%;
-
+     margin-top: 50%;
+     border-color:  #006A96;
+     font-family: 'Montserrat', sans-serif;
  }
-
+#user-information{
+    margin-bottom: -30%;
+    margin-left: 3%;
+    margin-top: 10%;
+}
+ #gear{
+     float: right;
+     /* margin-top: 30%; */
+ }
  #match-name{
      margin:auto;
      text-align: center;
@@ -115,7 +132,9 @@
 }
  /* left side msg and mtch buttons */
 #nav-buttons{
-    margin-top: 40%;
+    margin-top: -100%;
+
+    
 }
  #msg-btn, #mtch-btn{
     font-family: 'Montserrat', sans-serif;
@@ -125,7 +144,7 @@
  /* choosing buttons below cards */
  #yes-button{
     /* background-color: rgba(81, 228, 88, 0.5); */
-    color: rgba(81, 228, 88);
+    /* color: rgba(81, 228, 88); */
     font-size: 180%;
     border-color: rgba(81, 228, 88, 0.5);
     font-family: 'Montserrat', sans-serif;
@@ -135,7 +154,7 @@
  }
  #no-button{
     /* background-color: rgba(228, 86, 81, 0.5); */
-    color:  rgb(243, 160, 157);
+    /* color:  rgb(243, 160, 157); */
     font-size: 180%;
     border-color: rgba(228, 86, 81, 0.5);
     font-family: 'Montserrat', sans-serif;
@@ -145,7 +164,7 @@
 }
 #maybe-button{
     /* background-color: rgba(128, 116, 115, 0.637); */
-    color:rgb(161, 139, 136);
+    /* color:rgb(161, 139, 136); */
     font-size: 180%;
     border-color: rgba(128, 116, 115, 0.637);
     font-family: 'Montserrat', sans-serif;

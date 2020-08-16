@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Triton from './css/assets/triton-dark.png';
+// import Triton from './css/assets/triton.png';
 import { Button,Navbar,Jumbotron,Image } from 'react-bootstrap';
 import './css/landing.css';
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -12,7 +12,7 @@ export default class LandingPage extends Component{
             
             <div id="wrap">   
                 <div id="title">
-                    rooMe {''}
+                    rooMe 
                     
                     <Image id="triton-logo" src={triton} />
                 </div>

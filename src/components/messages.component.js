@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './css/messages.css'
+import pic from './css/assets/Iconblack.png';
 import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class Messages extends Component{
     render(){
@@ -8,7 +9,19 @@ export default class Messages extends Component{
                  <Container fluid>
                     <Row  float="center">
                         <Col className="sidebar" sm={4}>
-
+                           
+                            <Row id="user-information">
+                                <Col sm={4}>
+                                    <Image id="user-pic" src={pic} rounded />
+                                </Col>
+                                <Col sm={4}>
+                                    <div>
+                                        {/* <p id="username" href="/user-profile"> User Name </p> {''} */}
+                                        <Button size="lg" id="username" block variant="outline-light"  href="/user-profile"> Name </Button>{' '}
+                                  </div>
+                                </Col>
+                            </Row>
+                            
                             <div id="nav-buttons">
                                 <Container fluid>
                                     <Row float="center">
