@@ -60,7 +60,7 @@ export default class UserHome extends Component{
                         <Col className="main-Content" sm={8} smOffset={4}>
                                 <Row>
                                     <div className="title">
-                                        RooMe {''}
+                                        rooMe {''}
                                         <Image id="triton" src={triton} />
                                     </div>
                                 </Row>  
@@ -80,7 +80,7 @@ export default class UserHome extends Component{
                                         </Card.Text>
                                         </Card.Body>
                                         <Card.Footer>
-                                        <small className="text-muted" id="roommates">RooMe's</small>
+                                        <small className="text-muted" id="roommates">rooMes</small>
                                         </Card.Footer>
                                     </Card>
 

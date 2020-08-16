@@ -10,6 +10,7 @@ import NewUserPref from "./components/new-user-pref.component";
 import UserProfile from "./components/user-profile.component";
 import EditUserProfile from "./components/edit-profile.component";
 import EditUserPref from "./components/edit-user-pref.component";
+import CreateUserProfile from './components/create-profile.component';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
      
      <Router>
         <Route path="/" component={LandingPage} exact/>
+        <Route path="/create-profile" component={CreateUserProfile} />
         <Route path="/home" component={UserHome} />
         <Route path="/messages" component={Messages} />
         <Route path="/new-user" component={NewUserSetup} />
@@ -27,8 +29,7 @@ function App() {
 
      </Router>
 
-      
-
+    
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Triton from './css/assets/triton-dark.png';
-import { Button,Navbar,Jumbotron,Image } from 'react-bootstrap';
+import { Button,Jumbotron,Image } from 'react-bootstrap';
 import './css/landing.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import triton from './css/assets/triton-dark.png'; 
@@ -27,7 +26,9 @@ export default class LandingPage extends Component{
                         rooMe is a website that assists UCSD students in finding compatible roommates.
                         </p>
                         <p>
-                            <Button id="test-custom-btn" variant="outline-light">Join</Button>{' '}
+                        
+                            <Button id="test-custom-btn" variant="outline-light" href='/create-profile'>Join</Button>{' '}
+
                             <Button id="test-custom-btn" variant="outline-light">Log in</Button>{' '}
 
                         </p>

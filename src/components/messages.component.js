@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import './css/messages.css'
 import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import pic from './css/assets/Iconblack.png'; 
+import triton from './css/assets/triton-dark.png'; 
+
 export default class Messages extends Component{
     render(){
         return(
@@ -21,10 +24,15 @@ export default class Messages extends Component{
                                     </Row>
                                 </Container>
                             </div>
-                            
 
                         </Col>
                         <Col className="main-Content" sm={8} smOffset={4}>
+                        <Row>
+                                    <div className="title">
+                                        rooMe {''}
+                                        <Image id="triton" src={triton} />
+                                    </div>
+                        </Row>
                                     
                                 
                         </Col>
