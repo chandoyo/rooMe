@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import pic from './css/assets/Iconblack.png';
 import './css/edit-user-pref.css'
 import triton from './css/assets/triton-dark.png'; 
-import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Card, Form, CardGroup, Button, InputGroup, Container, Row, Col, Tab, Tabs, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class EditUserPref extends Component{
     render(){
         return(
@@ -36,7 +36,7 @@ export default class EditUserPref extends Component{
                                     </Row>
                                     <Row float="center" id="profile-button">
                                         <Col>
-                                        <Button size="lg" id="msg-btn" block variant="outline-light"  href="/edit-user-preferences">Edit Preferences</Button>{' '}
+                                        <Button size="lg" id="msg-btn" block variant="light"  href="/edit-user-preferences">Edit Preferences</Button>{' '}
                                         </Col>
                                     </Row>
                                     <Row float="center" id="profile-button">
@@ -61,7 +61,81 @@ export default class EditUserPref extends Component{
                                         <Image id="triton" src={triton} />
                                     </div>
                                 </Row>             
-                                
+                                <CardGroup id="cards">
+                                    <Card id="profile-left">
+                                        <Card.Body>
+                                        <Row>
+                                            <Col>
+                                             <h4>Preference</h4>
+                                            </Col>
+                                            <Col>
+                                            <h4> Me </h4>
+                                            {/* <Row>
+                                            <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
+                                                <Form.Control as="select">
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </Form.Control>
+                                            </Form.Group>
+                                            </Row>
+                                            <Row>
+                                            <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
+                                                <Form.Control as="select">
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </Form.Control>
+                                            </Form.Group>
+                                            </Row>
+                                            */}  
+                                            </Col>
+                                        </Row>  
+                                        </Card.Body>
+ 
+                                    </Card>
+
+                                    <Card id="profile-right"> 
+                                        <Card.Body>
+                                        <Row>
+                                            <Col>
+                                            <h4> Them </h4>
+                                            {/* <Row>
+                                            <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
+                                                <Form.Control as="select">
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </Form.Control>
+                                            </Form.Group>
+                                            </Row>
+                                            <Row>
+                                            <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
+                                                <Form.Control as="select">
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                                </Form.Control>
+                                            </Form.Group>
+                                            </Row> */}
+                                            </Col>
+                                            <Col>
+                                            <h4> Display </h4>
+                                            
+                                            {/* <Row>
+                                                <Form.Group controlId="formBasicCheckbox">
+                                                    <Form.Check type="checkbox" />
+                                                </Form.Group>
+                                            </Row>
+                                            <Row>
+                                                <Form.Group controlId="formBasicCheckbox">
+                                                    <Form.Check type="checkbox" />
+                                                </Form.Group>
+                                            </Row> */}
+                                            
+                                            </Col>
+                                        </Row> 
+                                        </Card.Body>
+                    
+                                    </Card>
+
+                                </CardGroup>     
                         </Col>
                     </Row>
 

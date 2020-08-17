@@ -94,16 +94,16 @@ export default class UserHome extends Component{
                                     <Card id="profile-right"> 
                                         <Card.Body>
                                         
-                                   
+                                        {/* tabs on right card to switch between bio/pref */}
 
                                         <Tabs variant="pills" defaultActiveKey="profile" className="tab">
-                                            <Tab className="tabLeft" eventKey="home" title="Home">
+                                            <Tab id="tabLeft" eventKey="home" title="Bio">
                                                     <Card.Title id="about">About</Card.Title>
                                                         <Card.Text id="bio">
                                                             This is my bio.{' '}
                                                      </Card.Text>
                                             </Tab>
-                                            <Tab className="tabRight" eventKey="profile" title="Profile">
+                                            <Tab id="tabRight" eventKey="profile" title="Info">
                                                     <Card.Title id="about">Preferences</Card.Title>
                                                         <Card.Text id="bio">
                                                             preferences go here.{' '}
@@ -111,6 +111,9 @@ export default class UserHome extends Component{
                                             </Tab>
                                         </Tabs>
                                         
+                                        
+                                
+
                                         
                                         </Card.Body>
                                         <Card.Footer id="see-more">

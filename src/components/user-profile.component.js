@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import pic from './css/assets/Iconblack.png';
 import './css/user-profile.css'
 import triton from './css/assets/triton-dark.png'; 
-import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Card, CardGroup, Button, Container, Row, Col, Image, Tab, Tabs, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class UserProfile extends Component{
     render(){
         return(
@@ -31,9 +31,9 @@ export default class UserProfile extends Component{
                             
                             <div id="nav-buttons">
                                 <Container fluid>
-                                    <Row float="center" id="profile-button">
+                                    <Row float="center" id="profile-button" className="current">
                                         <Col>
-                                        <Button size="lg" id="msg-btn" block variant="outline-light"  href="/user-profile">See profile</Button>{' '}
+                                        <Button size="lg" id="msg-btn" block variant="light"  href="/user-profile">See profile</Button>{' '}
                                         </Col>
                                     </Row>
                                     <Row float="center" id="profile-button">
@@ -62,7 +62,59 @@ export default class UserProfile extends Component{
                                         rooMe {''}
                                         <Image id="triton" src={triton} />
                                     </div>
-                                </Row>       
+                                </Row> 
+                                
+                                <CardGroup id="cards">
+                                    <Card id="profile-left">
+                                        <div id="spacing-above-pic">_</div>
+                                        <Card.Img variant="top" id="match-pic" src={pic}/>
+                                        <Card.Body>
+                                        <Card.Title id="name">Name</Card.Title>
+                                        <Card.Text id="basic-info">
+                                            <p>
+                                                College
+                                            </p>
+                                            <p>
+                                                On/Off campus
+                                            </p>
+                                        </Card.Text>
+                                        </Card.Body>
+                                        <Card.Footer>
+                                        <small className="text-muted" id="roommates">rooMes</small>
+                                        </Card.Footer>
+                                    </Card>
+
+                                    <Card id="profile-right"> 
+                                        <Card.Body>
+                                        
+                                        {/* tabs on right card to switch between bio/pref */}
+
+                                        <Tabs variant="pills" defaultActiveKey="profile" className="tab">
+                                            <Tab id="tabLeft" eventKey="home" title="Bio">
+                                                    <Card.Title id="about">About</Card.Title>
+                                                        <Card.Text id="bio">
+                                                            This is my bio.{' '}
+                                                     </Card.Text>
+                                            </Tab>
+                                            <Tab id="tabRight" eventKey="profile" title="Info">
+                                                    <Card.Title id="about">Preferences</Card.Title>
+                                                        <Card.Text id="bio">
+                                                            preferences go here.{' '}
+                                                     </Card.Text>
+                                            </Tab>
+                                        </Tabs>
+                                        
+                                        
+                                
+
+                                        
+                                        </Card.Body>
+                                        <Card.Footer id="see-more">
+                                        <small className="text-muted">see more</small>
+                                        </Card.Footer>
+                                    </Card>
+
+                                </CardGroup>      
                                 
                         </Col>
                     </Row>

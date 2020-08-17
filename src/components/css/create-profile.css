@@ -1,0 +1,24 @@
+h3 {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color:  #006A96;
+}
+
+#formHeader{
+    font-family: 'Montserrat', sans-serif;
+    color:  #006A96;
+}
+
+#submitBtn{
+    font-family: 'Montserrat', sans-serif;
+}
+.form-group{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3%;
+    /* text-align: center; */
+}
+#input{
+    font-family: 'Montserrat', sans-serif;
+}

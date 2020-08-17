@@ -47,16 +47,16 @@
     background-color:  rgb(81, 145, 173, 20%);  
  }
 #bio, #about{
+    margin-top: 5%;
     font-family: 'Montserrat', sans-serif;
 }
 #roommates{
     font-family: 'Montserrat', sans-serif;
 }
-.tab, #more-tab, #bio-tab{
-    color: white;
-}
-.tabLeft, .tabRight{
+
+#tabLeft, #tabRight{
     font-family: 'Montserrat', sans-serif;
+    
 }
 .title{
     text-align: center;

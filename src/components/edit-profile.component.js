@@ -41,7 +41,7 @@ export default class EditUserProfile extends Component{
                                     </Row>
                                     <Row float="center" id="profile-button">
                                         <Col>
-                                        <Button size="lg" id="msg-btn" block variant="outline-light"  href="/edit-user-profile">Edit Info</Button>{' '}
+                                        <Button size="lg" id="msg-btn" block variant="light"  href="/edit-user-profile">Edit Info</Button>{' '}
                                         </Col>
                                     </Row>
                                     <Row float="center" id="profile-button">
