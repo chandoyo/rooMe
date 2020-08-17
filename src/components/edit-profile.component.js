@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import pic from './css/assets/Iconblack.png';
 import './css/edit-profile.css'
+import triton from './css/assets/triton-dark.png'; 
 import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class EditUserProfile extends Component{
     render(){
@@ -54,7 +55,13 @@ export default class EditUserProfile extends Component{
 
                         </Col>
                         <Col className="main-Content" sm={8} smOffset={4}>
-                                    
+                                
+                            <Row>
+                                <div className="title">
+                                    rooMe {''}
+                                    <Image id="triton" src={triton} />
+                                </div>
+                            </Row>        
                                 
                         </Col>
                     </Row>

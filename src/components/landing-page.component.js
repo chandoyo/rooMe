@@ -27,7 +27,9 @@ export default class LandingPage extends Component{
                         rooMe is a website that assists UCSD students in finding compatible roommates.
                         </p>
                         <p>
-                            <Button id="test-custom-btn" variant="outline-light">Join</Button>{' '}
+                        
+                            <Button id="test-custom-btn" variant="outline-light" href='/create-profile'>Join</Button>{' '}
+
                             <Button id="test-custom-btn" variant="outline-light">Log in</Button>{' '}
 
                         </p>
