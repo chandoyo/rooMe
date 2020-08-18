@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './css/home.css'
-import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Card, Tab, Nav, Tabs,CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 import pic from './css/assets/Iconblack.png'; 
 import triton from './css/assets/triton-dark.png'; 
 
@@ -10,17 +10,23 @@ export default class UserHome extends Component{
             <div id="home">
                <Container fluid>
                     <Row  float="center">
+                        {/* left side of page */}
                         <Col className="sidebar" sm={4}>
-                           
-                            {/* <div id="username"> 
-                            <Image id="user-pic" src={pic} rounded />
-                            User Name 
-                            </div>
-
-                            <svg id="gear" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
-                                <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z"/>
-                            </svg> */}
+                           <Row id="user-information">
+                               <Col sm={4}>
+                                    <Image id="user-pic" src={pic} rounded />
+                                </Col>
+                                
+                                <Col sm={4}>
+                                <div>
+                                    {/* <p id="username" href="/user-profile"> User Name </p> {''} */}
+                                    <Button size="lg" id="username" block variant="outline-light"  href="/user-profile"> Name </Button>{' '}
+                               </div>
+                   
+                                
+                                </Col>
+                           </Row>
+                            
 
                             <div id="nav-buttons">
                                 <Container fluid>
@@ -57,6 +63,7 @@ export default class UserHome extends Component{
                             
 
                         </Col>
+                        {/* right side of page */}
                         <Col className="main-Content" sm={8} smOffset={4}>
                                 <Row>
                                     <div className="title">
@@ -86,10 +93,28 @@ export default class UserHome extends Component{
 
                                     <Card id="profile-right"> 
                                         <Card.Body>
-                                        <Card.Title id="about">About</Card.Title>
-                                        <Card.Text id="bio">
-                                            This is my bio.{' '}
-                                        </Card.Text>
+                                        
+                                        {/* tabs on right card to switch between bio/pref */}
+
+                                        <Tabs variant="pills" defaultActiveKey="profile" className="tab">
+                                            <Tab id="tabLeft" eventKey="home" title="Bio">
+                                                    <Card.Title id="about">About</Card.Title>
+                                                        <Card.Text id="bio">
+                                                            This is my bio.{' '}
+                                                     </Card.Text>
+                                            </Tab>
+                                            <Tab id="tabRight" eventKey="profile" title="Info">
+                                                    <Card.Title id="about">Preferences</Card.Title>
+                                                        <Card.Text id="bio">
+                                                            preferences go here.{' '}
+                                                     </Card.Text>
+                                            </Tab>
+                                        </Tabs>
+                                        
+                                        
+                                
+
+                                        
                                         </Card.Body>
                                         <Card.Footer id="see-more">
                                         <small className="text-muted">see more</small>
@@ -97,7 +122,8 @@ export default class UserHome extends Component{
                                     </Card>
 
                                 </CardGroup>
-                                
+                               
+                               {/* these are the choosing buttons */}
                                 <div id="buttons">
                                     <Button id="yes-button" variant="outline-success">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

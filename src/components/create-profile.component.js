@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
+import triton from './css/assets/triton-dark.png'; 
+import './css/create-profile.css'
+import {Image} from 'react-bootstrap';
 export default class CreateUserProfile extends Component{
     constructor(props) {
         super (props);
@@ -74,11 +76,14 @@ export default class CreateUserProfile extends Component{
             <div>
             <h3>Create New Profile</h3>
             <form onSubmit={this.onSubmit}>
+              
               <div className="form-group"> 
-                <label>Username: </label>
+                
+                <label id="formHeader">Username: </label>
                 <select ref="userInput"
                     required
                     className="form-control"
+                    id="input"
                     value={this.state.username}
                     onChange={this.onChangeUsername}>
                     {
@@ -90,28 +95,35 @@ export default class CreateUserProfile extends Component{
                       })
                     }
                 </select>
+              
               </div>
               <div className="form-group">
-                <label>Major: </label>
+                <label id="formHeader">Major: </label>
                 <input 
                     type="text" 
+                    id="input"
                     className="form-control"
                     value={this.state.major}
                     onChange={this.onChangeMajor}
                     />
               </div>
-              <div className="form-group"> 
-                <label>Description: </label>
-                <input  type="text"
+              
+              <div  className="form-group"> 
+                <label id="formHeader">Description: </label>
+                <input  
+                    type="text"
+                    id="input"
                     required
                     className="form-control"
                     value={this.state.description}
                     onChange={this.onChangeDescription}
                     />
               </div>
+             
               <div className="form-group">
-                <label>Year: </label>
+                <label id="formHeader">Year: </label>
                 <input 
+                    id="input"
                     type="text" 
                     className="form-control"
                     value={this.state.year}
@@ -122,7 +134,7 @@ export default class CreateUserProfile extends Component{
 
       
               <div className="form-group">
-                <input type="submit" value="Create Profile" className="btn btn-primary" />
+                <input id="submitBtn" type="submit" value="Create Profile" className="btn btn-outline-dark" />
               </div>
             </form>
           </div>

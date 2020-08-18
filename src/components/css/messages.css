@@ -14,3 +14,16 @@
 #nav-buttons{
     margin-top: 40%;
 }
+.title{
+    text-align: center;
+    margin-top: -16%;
+    margin-right: auto;
+    margin-left: auto;
+    color: #006A96;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+#triton{
+    width: 20px;
+    height: 20px;
+}
