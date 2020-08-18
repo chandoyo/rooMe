@@ -3,6 +3,7 @@ import axios from 'axios';
 import triton from './css/assets/triton-dark.png'; 
 import './css/create-profile.css'
 import {Image} from 'react-bootstrap';
+
 export default class CreateUserProfile extends Component{
     constructor(props) {
         super (props);
@@ -11,15 +12,13 @@ export default class CreateUserProfile extends Component{
         this.onChangeMajor = this.onChangeMajor.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
         this.onChangeYear = this.onChangeYear.bind(this);
-        //this.onChangeDate = this.onChangeDate.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             username: '',
             major: '',
             description: '',
-            year: '',
-            //date: new Date(),
+            year: 1,
             users: []
         }
     }
@@ -61,12 +60,11 @@ export default class CreateUserProfile extends Component{
             major: this.state.major,
             description: this.state.description,
             year: this.state.year,
-            //date: this.state.date
         }
         console.log(profile);
 
-        axios.post('http://localhost:5000/profile/add', profile)
-        .then(res => console.log(res.data));
+        /*axios.post('http://localhost:5000/profile/add', profile)
+        .then(res => console.log(res.data)); */
 
         window.location = '/';
     }
@@ -138,11 +136,7 @@ export default class CreateUserProfile extends Component{
               </div>
             </form>
           </div>
-            /*
-            <div id="create-profile">
-                <p> user can create profile here </p>
-            </div>
-            */
+
         );
     }
 }

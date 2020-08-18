@@ -12,14 +12,12 @@ router.route('/add').post((req, res) => {
   const major = req.body.major
   const description = req.body.description;
   const year = Number(req.body.year);
-  //const date = Date.parse(req.body.date);
 
   const newProfile = new Profile({
     username,
     major,
     description,
     year
-    //date,
   });
 
   newProfile.save()
@@ -46,7 +44,6 @@ router.route('/update/:id').post((req, res) => {
       profile.major = req.body.major;
       profile.description = req.body.description;
       profile.year = Number(req.body.year);
-      //profile.date = Date.parse(req.body.date);
 
       profile.save()
         .then(() => res.json('Profile updated!'))

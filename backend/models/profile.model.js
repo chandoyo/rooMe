@@ -7,7 +7,6 @@ const profileSchema = new Schema({
   major: {type: String, required: true},
   description: { type: String, required: true },    // change to false for optional??
   year: { type: Number, required: true },
-  //date: { type: Date, required: true },
 }, {
   timestamps: true,
 });
