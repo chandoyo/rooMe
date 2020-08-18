@@ -19,7 +19,6 @@ function App() {
      <Router>
         <Route path="/" component={LandingPage} exact/>
         <Route path="/profile" component={CreateUserProfile} />
-        <Route path="/profile" component={CreateUserProfile} />
         <Route path="/home" component={UserHome} />
         <Route path="/messages" component={Messages} />
         <Route path="/new-user" component={NewUserSetup} />
