@@ -19,15 +19,24 @@ export default class CreateUserProfile extends Component{
             major: '',
             description: '',
             year: 1,
-            users: []
+            //users: []
         }
     }
 
     componentDidMount() {
-        this.setState({
-            users: ['test user'],
-            username: 'test user'
+        axios.get('http://localhost:5000/profile/')
+        .then(response => {
+          if (response.data.length > 0) {
+            this.setState({
+              profile: response.data.map(profile => profile.username),
+              username: response.data[0].username
+            })
+          }
         })
+        .catch((error) => {
+          console.log(error);
+        })
+  
     }
     onChangeUsername(e) {
         this.setState({
@@ -63,8 +72,8 @@ export default class CreateUserProfile extends Component{
         }
         console.log(profile);
 
-        /*axios.post('http://localhost:5000/profile/add', profile)
-        .then(res => console.log(res.data)); */
+        axios.post('http://localhost:5000/profile/add', profile)
+         .then(res => console.log(res.data)); 
 
         window.location = '/';
     }
@@ -77,22 +86,14 @@ export default class CreateUserProfile extends Component{
               
               <div className="form-group"> 
                 
-                <label id="formHeader">Username: </label>
-                <select ref="userInput"
-                    required
-                    className="form-control"
+                <label id="formHeader">Username: </label>  
+                <input 
+                    type="text" 
                     id="input"
+                    className="form-control"
                     value={this.state.username}
-                    onChange={this.onChangeUsername}>
-                    {
-                      this.state.users.map(function(user) {
-                        return <option 
-                          key={user}
-                          value={user}>{user}
-                          </option>;
-                      })
-                    }
-                </select>
+                    onChange={this.onChangeUsername}
+                    />
               
               </div>
               <div className="form-group">

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import UserHome from "./components/user-home.component";
 import LandingPage from "./components/landing-page.component";
 import Messages from "./components/messages.component";
@@ -14,9 +14,9 @@ import CreateUserProfile from './components/create-profile.component';
 
 function App() {
   return (
-    <div className="rooMe">
      
      <Router>
+       <div className="rooMe">
         <Route path="/" component={LandingPage} exact/>
         <Route path="/profile" component={CreateUserProfile} />
         <Route path="/home" component={UserHome} />
@@ -26,11 +26,11 @@ function App() {
         <Route path="/user-profile" component={UserProfile} />
         <Route path="/edit-user-profile" component={EditUserProfile} />
         <Route path="/edit-user-preferences" component={EditUserPref} />
+        </div>
 
      </Router>
 
     
-    </div>
   );
 }
 

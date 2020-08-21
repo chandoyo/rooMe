@@ -27,6 +27,3 @@ app.use('/users', usersRouter);
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
-/*const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
-);*/
