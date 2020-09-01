@@ -10,20 +10,21 @@ export default class CreateUserProfile extends Component{
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangeMajor = this.onChangeMajor.bind(this);
-        this.onChangeDescription = this.onChangeDescription.bind(this);
+        this.onChangeBio = this.onChangeBio.bind(this);
         this.onChangeYear = this.onChangeYear.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             username: '',
             major: '',
-            description: '',
-            year: 1,
+            bio: '',
+            year: '',
             //users: []
         }
     }
 
     componentDidMount() {
+        /*
         axios.get('http://localhost:5000/profile/')
         .then(response => {
           if (response.data.length > 0) {
@@ -36,6 +37,7 @@ export default class CreateUserProfile extends Component{
         .catch((error) => {
           console.log(error);
         })
+        */
   
     }
     onChangeUsername(e) {
@@ -50,9 +52,9 @@ export default class CreateUserProfile extends Component{
         });
     }
 
-    onChangeDescription(e) {
+    onChangeBio(e) {
         this.setState({
-            description: e.target.value
+            bio: e.target.value
         });
     }
 
@@ -67,7 +69,7 @@ export default class CreateUserProfile extends Component{
         const profile =  {
             username: this.state.username,
             major: this.state.major,
-            description: this.state.description,
+            bio: this.state.bio,
             year: this.state.year,
         }
         console.log(profile);
@@ -108,14 +110,14 @@ export default class CreateUserProfile extends Component{
               </div>
               
               <div  className="form-group"> 
-                <label id="formHeader">Description: </label>
+                <label id="formHeader">Bio: </label>
                 <input  
                     type="text"
                     id="input"
                     required
                     className="form-control"
-                    value={this.state.description}
-                    onChange={this.onChangeDescription}
+                    value={this.state.bio}
+                    onChange={this.onChangeBio}
                     />
               </div>
              

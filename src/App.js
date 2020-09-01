@@ -11,6 +11,7 @@ import UserProfile from "./components/user-profile.component";
 import EditUserProfile from "./components/edit-profile.component";
 import EditUserPref from "./components/edit-user-pref.component";
 import CreateUserProfile from './components/create-profile.component';
+import ProfileList from './components/profile-list.component';  
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        <div className="rooMe">
         <Route path="/" component={LandingPage} exact/>
         <Route path="/profile" component={CreateUserProfile} />
+        
         <Route path="/home" component={UserHome} />
         <Route path="/messages" component={Messages} />
         <Route path="/new-user" component={NewUserSetup} />
@@ -26,6 +28,9 @@ function App() {
         <Route path="/user-profile" component={UserProfile} />
         <Route path="/edit-user-profile" component={EditUserProfile} />
         <Route path="/edit-user-preferences" component={EditUserPref} />
+        
+        <Route path="/profile-list" component={ProfileList} /> 
+         
         </div>
 
      </Router>

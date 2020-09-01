@@ -110,9 +110,6 @@ export default class UserHome extends Component{
                                                      </Card.Text>
                                             </Tab>
                                         </Tabs>
-                                        
-                                        
-                                
 
                                         
                                         </Card.Body>
