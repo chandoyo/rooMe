@@ -6,9 +6,9 @@ const userSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
-    trim: true,
-    minlength: 3
+    //unique: true,
+    //trim: true,
+    //minlength: 3
   },
   email: {
     type: String,
@@ -26,6 +26,9 @@ const userSchema = new Schema({
   timestamps: true,
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('users', userSchema);
 
-module.exports = User;
+module.exports = User; 
+
+
+//module.exports = User = mongoose.model("User", userSchema);

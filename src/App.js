@@ -12,14 +12,25 @@ import EditUserProfile from "./components/edit-profile.component";
 import EditUserPref from "./components/edit-user-pref.component";
 import CreateUserProfile from './components/create-profile.component';
 import ProfileList from './components/profile-list.component';  
+import Join from './components/join.component';
+import Login from './components/login.component';
+
+//import { Provider } from "react-redux";
+//import store from "./store";
 
 function App() {
   return (
      
+    //<Provider store={store}>
+
+    
      <Router>
        <div className="rooMe">
         <Route path="/" component={LandingPage} exact/>
         <Route path="/profile" component={CreateUserProfile} />
+
+        <Route path="/join" component={Join} />
+        <Route path="/login" component={Login} />
         
         <Route path="/home" component={UserHome} />
         <Route path="/messages" component={Messages} />
@@ -34,6 +45,8 @@ function App() {
         </div>
 
      </Router>
+
+     //</Provider>
 
     
   );

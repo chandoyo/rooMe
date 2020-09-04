@@ -77,7 +77,7 @@ export default class CreateUserProfile extends Component{
         axios.post('http://localhost:5000/profile/add', profile)
          .then(res => console.log(res.data)); 
 
-        window.location = '/';
+        window.location = '/home';
     }
 
     render(){

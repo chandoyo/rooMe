@@ -28,9 +28,9 @@ export default class LandingPage extends Component{
                         </p>
                         <p>
                         
-                            <Button id="test-custom-btn" variant="outline-light" href='/profile'>Join</Button>{' '}
+                            <Button id="test-custom-btn" variant="outline-light" href='/join'>Join</Button>{' '}
 
-                            <Button id="test-custom-btn" variant="outline-light">Log in</Button>{' '}
+                            <Button id="test-custom-btn" variant="outline-light" href='login'>Log in</Button>{' '}
 
                         </p>
                     </div>
