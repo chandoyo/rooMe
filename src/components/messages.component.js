@@ -3,6 +3,47 @@ import './css/messages.css'
 import pic from './css/assets/Iconblack.png';
 import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 import triton from './css/assets/triton-dark.png'; 
+import io from "socket.io";
+
+// let server = "http://localhost:5000";
+// const socket = io(server);
+const socket = io('http://localhost:3000')
+socket.on('chat-message', data => {
+    console.log(data)
+})
+const messageContainer = document.getElementById('message-container')
+const messageForm = document.getElementById('send-container')
+const messageInput = document.getElementById('message-input')
+
+const name = prompt('What is your name?')
+appendMessage('You joined')
+socket.emit('new-user', name)
+
+socket.on('chat-message', data => {
+  appendMessage(`${data.name}: ${data.message}`)
+})
+
+socket.on('user-connected', name => {
+  appendMessage(`${name} connected`)
+})
+
+socket.on('user-disconnected', name => {
+  appendMessage(`${name} disconnected`)
+})
+
+messageForm.addEventListener('submit', e => {
+  e.preventDefault()
+  const message = messageInput.value
+  appendMessage(`You: ${message}`)
+  socket.emit('send-chat-message', message)
+  messageInput.value = ''
+})
+
+function appendMessage(message) {
+  const messageElement = document.createElement('div')
+  messageElement.innerText = message
+  messageContainer.append(messageElement)
+}
 
 export default class Messages extends Component{
     render(){
@@ -44,9 +85,9 @@ export default class Messages extends Component{
                                         rooMe {''}
                                         <Image id="triton" src={triton} />
                                     </div>
-                                </Row>
-                                    
-                                
+                                </Row>   
+
+
                         </Col>
                     </Row>
 

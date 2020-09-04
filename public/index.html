@@ -17,11 +17,46 @@
      <!-- font -->
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
     </div>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="../src/components/messages.component.js"></script>
+    <style>
+    #message-container {
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    #message-container div {
+      background-color: #CCC;
+      padding: 5px;
+    }
+
+    #message-container div:nth-child(2n) {
+      background-color: #FFF;
+    }
+
+    #send-container {
+      position: fixed;
+      padding-bottom: 30px;
+      bottom: 0;
+      background-color: white;
+      max-width: 1200px;
+      width: 80%;
+      display: flex;
+    }
+
+    #message-input {
+      flex-grow: 1;
+    }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
+    <div id="message-container"></div>
+    <form id="send-container">
+      <input type="text" id="message-input">
+      <button type="submit" id="send-button">Send</button>
+    </form>
 
     <!--
       This HTML file is a template.
