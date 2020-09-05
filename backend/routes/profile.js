@@ -10,13 +10,13 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
   const username = req.body.username;
   const major = req.body.major
-  const description = req.body.description;
+  const bio = req.body.bio;
   const year = Number(req.body.year);
 
   const newProfile = new Profile({
     username,
     major,
-    description,
+    bio,
     year
   });
 
@@ -42,7 +42,7 @@ router.route('/update/:id').post((req, res) => {
     .then(profile => {
       profile.username = req.body.username;
       profile.major = req.body.major;
-      profile.description = req.body.description;
+      profile.bio = req.body.bio;
       profile.year = Number(req.body.year);
 
       profile.save()
