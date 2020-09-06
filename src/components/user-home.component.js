@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './css/home.css'
-import {Card, Tab, Nav, Tabs,CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Card, Tab, Nav, Tabs,CardGroup, Button, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import { setConfiguration, Row, Col, Container } from "react-grid-system";
 import pic from './css/assets/Iconblack.png'; 
 import triton from './css/assets/triton-dark.png'; 
 

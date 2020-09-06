@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './components/css/App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import UserHome from "./components/user-home.component";
@@ -14,7 +14,7 @@ import CreateUserProfile from './components/create-profile.component';
 import ProfileList from './components/profile-list.component';  
 import Join from './components/join.component';
 import Login from './components/login.component';
-
+import Temp from './components/matchesNew';
 //import { Provider } from "react-redux";
 //import store from "./store";
 
@@ -41,6 +41,7 @@ function App() {
         <Route path="/edit-user-preferences" component={EditUserPref} />
         
         <Route path="/profile-list" component={ProfileList} /> 
+        <Route path="/temp" component={Temp} /> 
          
         </div>
 
