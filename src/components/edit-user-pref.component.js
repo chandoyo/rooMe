@@ -2,12 +2,71 @@ import React, {Component} from 'react';
 import pic from './css/assets/Iconblack.png';
 import './css/edit-user-pref.css'
 import triton from './css/assets/triton-dark.png'; 
+import demoPic from './css/assets/serinaProfPic.png';
+import NameAndPic from './username-and-pic'
+import RoomeLogo from './roomeLogo.component'
+import PrefCard from './prefCard'
 import {Card, Form, CardGroup, Button, InputGroup, Container, Row, Col, Tab, Tabs, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class EditUserPref extends Component{
     render(){
+        const demoName = "Serina";
         return(
             <div id="user-pref">
-                 <Container fluid>
+
+                <Container fluid>
+                    <Row>
+                        {/* left side */}
+                        <Col id="leftTab" md={4}>
+                            {/* <Row> */}
+                                {/* user name at top left */}
+        
+                                <Col  id="with-arrow" md={12}>
+                                    <div id="back-arrow">
+                                        <a href="/home-matches">  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
+                                        <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/> </svg></a>
+                                    </div>
+                                   
+                                    <div id="userProfileSpacing"> 
+                                        <NameAndPic nameOfUser={demoName} userProfPic={demoPic}></NameAndPic> 
+                                    </div>
+                                    
+                                </Col>
+                
+                                <Col md={12} id="profile-button-top">
+                                    <Button size="lg" id="msg-btn" block variant="outline-light"  href="/user-profile">See profile</Button>{' '}
+                                </Col>
+                                    
+                                <Col  md={12} id="profile-button">
+                                    <Button size="lg" id="msg-btn" block variant="light"  href="/edit-user-preferences">Edit Preferences</Button>{' '}
+                                </Col>
+                                   
+                                <Col  md={12} id="profile-button">
+                                    <Button size="lg" id="msg-btn" block variant="outline-light"  href="/edit-user-profile">Edit Info</Button>{' '}
+                                </Col>
+                                   
+                                <Col  md={12} id="profile-button">
+                                    <Button size="lg" id="msg-btn" block variant="outline-light"  href="/">Log out</Button>{' '}
+                                </Col>
+            
+                        </Col>
+                        {/* right side */}
+                        <Col md={8}>
+                            {/* <Row> */}
+                                {/* rooMe logo */}
+                                <Col md={12}>
+                                   <RoomeLogo></RoomeLogo>
+                                </Col>
+                               
+                                <Col md={12}>
+                                   <PrefCard> </PrefCard>
+                                   
+                                </Col>
+                        
+                        </Col>
+                    </Row>
+                </Container>
+                 {/* <Container fluid>
                     <Row  float="center">
                         <Col className="sidebar" sm={4}>
                            
@@ -70,7 +129,7 @@ export default class EditUserPref extends Component{
                                             </Col>
                                             <Col>
                                             <h4> Me </h4>
-                                            {/* <Row>
+                                            <Row>
                                             <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
                                                 <Form.Control as="select">
                                                 <option>Yes</option>
@@ -86,7 +145,7 @@ export default class EditUserPref extends Component{
                                                 </Form.Control>
                                             </Form.Group>
                                             </Row>
-                                            */}  
+            
                                             </Col>
                                         </Row>  
                                         </Card.Body>
@@ -98,7 +157,7 @@ export default class EditUserPref extends Component{
                                         <Row>
                                             <Col>
                                             <h4> Them </h4>
-                                            {/* <Row>
+                                            <Row>
                                             <Form.Group id="chooseBtn" controlId="exampleForm.ControlSelect1">
                                                 <Form.Control as="select">
                                                 <option>Yes</option>
@@ -113,12 +172,12 @@ export default class EditUserPref extends Component{
                                                 <option>No</option>
                                                 </Form.Control>
                                             </Form.Group>
-                                            </Row> */}
+                                            </Row> 
                                             </Col>
                                             <Col>
                                             <h4> Display </h4>
                                             
-                                            {/* <Row>
+                                            <Row>
                                                 <Form.Group controlId="formBasicCheckbox">
                                                     <Form.Check type="checkbox" />
                                                 </Form.Group>
@@ -127,7 +186,7 @@ export default class EditUserPref extends Component{
                                                 <Form.Group controlId="formBasicCheckbox">
                                                     <Form.Check type="checkbox" />
                                                 </Form.Group>
-                                            </Row> */}
+                                            </Row> 
                                             
                                             </Col>
                                         </Row> 
@@ -139,7 +198,7 @@ export default class EditUserPref extends Component{
                         </Col>
                     </Row>
 
-                </Container>
+                </Container> */}
             </div>
         );
     }

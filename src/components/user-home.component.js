@@ -1,10 +1,73 @@
 import React, {Component} from 'react';
 import './css/home.css'
-import {Card, Tab, Nav, Tabs,CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Card, Tab, Nav, Tabs,CardGroup, Button, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
+import { setConfiguration, Row, Col, Container } from "react-grid-system";
 import pic from './css/assets/Iconblack.png'; 
 import triton from './css/assets/triton-dark.png'; 
+import ReactCardFlip from 'react-card-flip';
+
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+//finding matches/other users
+
+const User = props => (
+    <tr>
+      <td>{props.user.username}</td>
+    </tr>
+)
 
 export default class UserHome extends Component{
+
+    constructor(props) {
+        super();
+            this.state = {
+                isFlipped: false
+            };
+            this.handleClick = this.handleClick.bind(this);
+    
+        //this.deleteExercise = this.deleteExercise.bind(this)
+    
+        this.state = {users: []};
+      }
+
+      handleClick(e) {
+          e.preventDefault();
+            this.setState(prevState => ({isFlipped: !prevState.isFlipped }));
+      }
+    
+      componentDidMount() {
+        axios.get('http://localhost:5000/new-user/')
+          .then(response => {
+            this.setState({ users: response.data })
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+      }
+
+      deleteUser(id) {
+        axios.delete('http://localhost:5000/profile/'+id)
+          .then(response => { console.log(response.data)});
+    
+        this.setState({
+          users: this.state.users.filter(el => el._id !== id)
+        })
+      }
+    
+      userList(id) {
+        axios.get('http://localhost:5000/profile/'+id)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+        // axios.post('http://localhost:5000/profile/add', profile)
+         // .then(res => console.log(res.data)); 
+    }
+
     render(){
         return(
             <div id="home">
@@ -64,6 +127,7 @@ export default class UserHome extends Component{
 
                         </Col>
                         {/* right side of page */}
+
                         <Col className="main-Content" sm={8} smOffset={4}>
                                 <Row>
                                     <div className="title">
@@ -71,6 +135,8 @@ export default class UserHome extends Component{
                                         <Image id="triton" src={triton} />
                                     </div>
                                 </Row>  
+                                <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
+                                    <div>
                                 <CardGroup id="cards">
                                     <Card id="profile-left">
                                         <div id="spacing-above-pic">_</div>
@@ -114,12 +180,57 @@ export default class UserHome extends Component{
                                         
                                         </Card.Body>
                                         <Card.Footer id="see-more">
-                                        <small className="text-muted">see more</small>
+                                            <Button id="see-more-btn" variant="outline-link" size="sm" onClick={this.handleClick}>see more</Button>{' '}
                                         </Card.Footer>
                                     </Card>
 
                                 </CardGroup>
+                                </div>
                                
+                               <div> 
+                               <CardGroup id="cards">
+                                    <Card id="profile-left">
+                                        <div id="spacing-above-pic">_</div>
+                                        <Card.Img variant="top" id="match-pic" src={pic}/>
+                                        <Card.Body>
+                                        <Card.Title id="name">Name</Card.Title>
+                                        <Card.Text id="basic-info">
+                                            <p>
+                                                College
+                                            </p>
+                                            <p>
+                                                On/Off campus
+                                            </p>
+                                        </Card.Text>
+                                        </Card.Body>
+                                        <Card.Footer>
+                                        <small className="text-muted" id="roommates">rooMes</small>
+                                        </Card.Footer>
+                                    </Card>
+
+                                    <Card id="profile-right"> 
+                                        <Card.Body>
+                                        
+                                        {/* tabs on right card to switch between bio/pref */}
+
+                                        <p> preferences go here </p>
+
+                                        
+                                        </Card.Body>
+                                        <Card.Footer id="see-more">
+                                            <Button id="see-more-btn" variant="outline-link" size="sm" onClick={this.handleClick}>back</Button>{' '}
+                                        </Card.Footer>
+                                    </Card>
+
+                                </CardGroup>
+
+
+                               </div>
+                            </ReactCardFlip>
+
+
+
+
                                {/* these are the choosing buttons */}
                                 <div id="buttons">
                                     <Button id="yes-button" variant="outline-success">

@@ -1,0 +1,200 @@
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+a:hover{
+    color: white;
+}
+h6{
+    font-family: 'Montserrat', sans-serif;
+}
+#websiteHeaderLogo{
+    display: flex;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 2%;
+}
+
+#webName{
+    color: #006A96;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+/* matches page */
+#cardName{
+    text-align: center;
+}
+#msg-btn, #mtch-btn{
+    font-family: 'Montserrat', sans-serif;
+ }
+#name-btn{
+    border-color:  #006A96;
+    background-color: #006A96;
+    /* color: black; */
+}
+#matchPic{
+    width: 40px;
+    height: 40px;
+    margin-top: 5%;
+    margin-left: 5%;
+    border: 2px solid white;
+    border-radius: 80%;
+}
+
+#matchNameSpace{
+    margin-left: 10%;
+    /* margin-top: 1%; */
+}
+#match-btn-group{
+    display: flex;
+    margin-left: 10%;
+    height: 110%;
+    width: 90%;
+    margin-top: 5%;
+}
+#matchesList{
+    margin-top: 10%;
+}
+#cardLeftInfo{
+    text-align: center;
+}
+#nameAndPicBox{
+    display: flex;
+}
+#userProfPicStyle{
+    width: 80px;
+    height: 80px;
+    border-radius: 80%;
+    border: 2px solid white;
+}
+#userProfileSpacing{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+#nameOfUserStyle{
+    margin-top: 8%;
+    margin-left: 10%;
+    color: white !important;
+   
+}
+#cardLeft{
+    background-color: rgb(81, 145, 173, 50%);
+}
+#leftTab{
+    background-color:  #006A96;
+    height: 100vh
+}
+#cardRight{
+    background-color:  rgb(81, 145, 173, 20%);
+}
+#toggleButtons{
+    display: flex;
+    margin-top: 10%;
+}
+#toggleButtonSpacing{
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#yes-btn{
+    font-size: 180%;
+    font-family: 'Montserrat', sans-serif;
+    border-color: black;
+    border-radius: 50%;
+}
+#no-btn{
+    font-size: 180%;
+    font-family: 'Montserrat', sans-serif;
+    border-color: black;
+    border-radius: 50%;
+}
+#ynButtons{
+    margin-left: 42%;
+    margin-right: 42%
+}
+#matchesCardStyle{
+    justify-items: center;
+}
+#cardsSize{
+   margin-left: 17%;
+   margin-right: 17%;
+   margin-top: 10%;
+   margin-bottom: 5%;
+}
+#cardMatchPic{
+    width: 100px;
+    height: 100px;
+    margin-left: 30%;
+    margin-top: 10%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+#with-arrow{
+    display: flex;
+}
+#back-arrow{
+    margin-top: 20%;
+}
+#profile-button{
+    margin-top: 10%;
+}
+#profile-button-top{
+    margin-top: 15%;
+}
+#prefStyle{
+    margin-top: 2%;
+}
+#chooseBtn{
+    width: 50%;
+    height: 40%;
+}
+
+#prefCard{
+    background-color:  rgb(81, 145, 173, 20%);
+    margin-top: 25%;
+    margin-right: 20%;
+    border-radius: 1%;
+}
+#prefTitles{
+    margin-top: 2%;
+}
+#backHome{
+    text-align: center;
+    margin-top: 20%;
+    /* justify-items: center; */
+}
+#register{
+    margin-top: 5%;
+    text-align: center;
+}
+#loginInput{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* margin-left: 40%; */
+}
+#passwordMargin{
+    margin-left: 5%;
+}
+#loginTitle{
+    text-align:center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color:  #006A96;
+    font-family: 'Montserrat', sans-serif;
+}
+#loginCard{
+    background-color:  rgb(81, 145, 173, 20%);
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 33%;
+    border-radius: 1%;
+}
+#regFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
