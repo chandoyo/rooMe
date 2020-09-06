@@ -5,7 +5,59 @@ import { setConfiguration, Row, Col, Container } from "react-grid-system";
 import pic from './css/assets/Iconblack.png'; 
 import triton from './css/assets/triton-dark.png'; 
 
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+//finding matches/other users
+
+const User = props => (
+    <tr>
+      <td>{props.user.username}</td>
+    </tr>
+)
+
 export default class UserHome extends Component{
+
+    constructor(props) {
+        super(props);
+    
+        //this.deleteExercise = this.deleteExercise.bind(this)
+    
+        this.state = {users: []};
+      }
+    
+      componentDidMount() {
+        axios.get('http://localhost:5000/new-user/')
+          .then(response => {
+            this.setState({ users: response.data })
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+      }
+
+      deleteUser(id) {
+        axios.delete('http://localhost:5000/profile/'+id)
+          .then(response => { console.log(response.data)});
+    
+        this.setState({
+          users: this.state.users.filter(el => el._id !== id)
+        })
+      }
+    
+      userList(id) {
+        axios.get('http://localhost:5000/profile/'+id)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+        // axios.post('http://localhost:5000/profile/add', profile)
+         // .then(res => console.log(res.data)); 
+    }
+
     render(){
         return(
             <div id="home">

@@ -5,6 +5,8 @@ import triton from './css/assets/triton-dark.png';
 import demoPic from './css/assets/serinaProfPic.png';
 import NameAndPic from './username-and-pic'
 import RoomeLogo from './roomeLogo.component'
+import MatchCard from './matchCard';
+import { Form } from 'react-bootstrap';
 import {Card, CardGroup, Button, Container, Row, Col, Image, ListGroupItem, ListGroup} from 'react-bootstrap';
 export default class EditUserProfile extends Component{
     render(){
@@ -56,12 +58,28 @@ export default class EditUserProfile extends Component{
                                 <Col md={12}>
                                    <RoomeLogo></RoomeLogo>
                                 </Col>
-                               
-                                <Col md={6}>
-                                   
+
+                                    
+                                <Col md={12}>
+                                    <Form>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Label>Email address</Form.Label>
+                                            <Form.Control type="email" placeholder="Enter a replacement email here." />
+                                            <Form.Text className="text-muted">
+                                            We'll never share your email with anyone else.
+                                            </Form.Text>
+                                        </Form.Group>
+
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Password</Form.Label>
+                                            <Form.Control type="password" placeholder="Enter a new password here." />
+                                        </Form.Group>
+                                        
+                                        <Button variant="primary" type="submit">
+                                            Submit
+                                        </Button>
+                                    </Form>
                                 </Col>
-                                
-                        
                         </Col>
                     </Row>
                 </Container>
