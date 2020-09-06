@@ -13,7 +13,7 @@ class MatchBlock extends React.Component{
                 </div>
             
                 <div id="matchNameSpace">
-                    <Button size="lg" id="name-btn" block variant="outline-light"  href="/home"> {this.props.matchName} </Button>
+                    <Button size="lg" id="name-btn" block variant="outline-light"  href="/home-matches"> {this.props.matchName} </Button>
                     {/* <a href="/home"> {this.props.matchName} </a> */}
                 </div>
                

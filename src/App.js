@@ -32,7 +32,7 @@ function App() {
         <Route path="/join" component={Join} />
         <Route path="/login" component={Login} />
         
-        <Route path="/home" component={UserHome} />
+        <Route path="/home-old" component={UserHome} />
         <Route path="/messages" component={Messages} />
         <Route path="/new-user" component={NewUserSetup} />
         <Route path="/new-user-preferences" component={NewUserPref} />
@@ -41,7 +41,7 @@ function App() {
         <Route path="/edit-user-preferences" component={EditUserPref} />
         
         <Route path="/profile-list" component={ProfileList} /> 
-        <Route path="/temp" component={Temp} /> 
+        <Route path="/home-matches" component={Temp} /> 
          
         </div>
 

@@ -13,6 +13,7 @@ a:hover{
 #websiteHeaderLogo{
     display: flex;
     margin-left: 45%;
+    margin-right: 45%;
     margin-top: 2%;
 }
 
@@ -94,7 +95,7 @@ a:hover{
 }
 #toggleButtonSpacing{
     margin-right: 10%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 #yes-btn{
@@ -111,6 +112,7 @@ a:hover{
 }
 #ynButtons{
     margin-left: 42%;
+    margin-right: 42%
 }
 #matchesCardStyle{
     justify-items: center;
@@ -118,8 +120,8 @@ a:hover{
 #cardsSize{
    margin-left: 17%;
    margin-right: 17%;
-   margin-top: 15%;
-   margin-bottom: 10%;
+   margin-top: 10%;
+   margin-bottom: 5%;
 }
 #cardMatchPic{
     width: 100px;
@@ -128,5 +130,34 @@ a:hover{
     margin-top: 10%;
     border: 2px solid white;
     border-radius: 50%;
-
 }
+#with-arrow{
+    display: flex;
+}
+#back-arrow{
+    margin-top: 20%;
+}
+#profile-button{
+    margin-top: 10%;
+}
+#profile-button-top{
+    margin-top: 15%;
+}
+#prefStyle{
+    margin-top: 2%;
+}
+#chooseBtn{
+    width: 50%;
+    height: 40%;
+}
+
+#prefCard{
+    background-color:  rgb(81, 145, 173, 20%);
+    margin-top: 25%;
+    margin-right: 20%;
+    border-radius: 1%;
+}
+#prefTitles{
+    margin-top: 2%;
+}
+

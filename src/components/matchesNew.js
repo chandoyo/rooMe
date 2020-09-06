@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './css/App.css';
 import pic from './css/assets/Iconblack.png';
-import squidward from './css/assets/squid2.jpg';
+import squidward from './css/assets/handsomesquid.jpeg';
 import demoPic from './css/assets/serinaProfPic.png';
 import MatchCard from './matchCard';
 import MatchBlock from './matchBlock';
@@ -17,11 +17,11 @@ export default class Temp extends Component{
         const cardExStatus = "On Campus"; 
         const demoName = "Serina";
         return(
-            <div id="profile">
+            <div id="home">
                 <Container fluid>
                     <Row>
                         {/* left side */}
-                        <Col id="leftTab" md={4}>
+                        <Col id="leftTab" xs={12} md={4}>
                             {/* <Row> */}
                                 {/* user name at top left */}
                                 <Col md={12}>
@@ -35,7 +35,7 @@ export default class Temp extends Component{
                                             <Button size="lg" id="msg-btn" block variant="outline-light"  href="/messages">Messages</Button>
                                         </div>
                                         <div>
-                                            <Button size="lg" id="mtch-btn" block variant="outline-light"  href="/home">Matches</Button>
+                                            <Button size="lg" id="mtch-btn" block variant="light"  href="/home-matches">Matches</Button>
                                         </div>
                                                
                                     </div>
@@ -59,13 +59,10 @@ export default class Temp extends Component{
                                 <Col md={12}>
                                     <MatchBlock matchName="Match E" matchPicture={pic}> </MatchBlock>
                                 </Col>
-                                <Col md={12}>
-                                    <MatchBlock matchName="Match F" matchPicture={pic}> </MatchBlock>
-                                </Col>
                             {/* </Row> */}
                         </Col>
                         {/* right side */}
-                        <Col md={8}>
+                        <Col xs={12} md={8}>
                             {/* <Row> */}
                                 {/* rooMe logo */}
                                 <Col md={12}>
@@ -73,7 +70,7 @@ export default class Temp extends Component{
                                 </Col>
                                
                                 <Col md={12} id="matchesCardStyle">
-                                    <MatchCard matchName={cardExampleName} college={cardExCollege} livingStatus={cardExStatus}></MatchCard>
+                                    <MatchCard matchName={cardExampleName} college={cardExCollege} pic={squidward} livingStatus={cardExStatus}></MatchCard>
                                 </Col>
                                 
                                 {/* choose buttons */}

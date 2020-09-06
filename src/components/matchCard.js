@@ -9,7 +9,7 @@ class MatchCard extends React.Component{
             <div>
                 <CardGroup id="cardsSize">
                     <Card id="cardLeft">
-                        <Card.Img variant="top" id="cardMatchPic" src={pic}/>
+                        <Card.Img variant="top" id="cardMatchPic" src={this.props.pic}/>
                         <Card.Body>
                             <Card.Title id="cardName">
                                 {this.props.matchName}
