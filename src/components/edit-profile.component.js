@@ -57,7 +57,7 @@ export default class EditUserProfile extends Component{
                                    <RoomeLogo></RoomeLogo>
                                 </Col>
                                
-                                <Col md={12}>
+                                <Col md={6}>
                                    
                                 </Col>
                                 

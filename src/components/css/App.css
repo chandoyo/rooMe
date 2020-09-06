@@ -10,6 +10,9 @@ a{
 a:hover{
     color: white;
 }
+h6{
+    font-family: 'Montserrat', sans-serif;
+}
 #websiteHeaderLogo{
     display: flex;
     margin-left: 45%;
@@ -160,4 +163,38 @@ a:hover{
 #prefTitles{
     margin-top: 2%;
 }
-
+#backHome{
+    text-align: center;
+    margin-top: 20%;
+    /* justify-items: center; */
+}
+#register{
+    margin-top: 5%;
+    text-align: center;
+}
+#loginInput{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* margin-left: 40%; */
+}
+#passwordMargin{
+    margin-left: 5%;
+}
+#loginTitle{
+    text-align:center;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    color:  #006A96;
+    font-family: 'Montserrat', sans-serif;
+}
+#loginCard{
+    background-color:  rgb(81, 145, 173, 20%);
+    margin-top: 5%;
+    margin-right: 30%;
+    margin-left: 33%;
+    border-radius: 1%;
+}
+#regFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
