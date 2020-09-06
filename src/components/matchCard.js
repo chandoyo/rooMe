@@ -4,9 +4,9 @@ import pic from './css/assets/Iconblack.png';
 import {Card, Button, CardGroup} from 'react-bootstrap';
 import Roommates from '../components/roommates.component'
 import ReactCardFlip from 'react-card-flip';
+import axios from 'axios';
 
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 class MatchCard extends React.Component{
 
@@ -58,7 +58,7 @@ class MatchCard extends React.Component{
 
                     <Card id="cardRight"> 
                         <Card.Body>
-                     
+                            <h4>Bio</h4>
                         </Card.Body>
                         <Card.Footer>
                         <Button id="see-more-btn" variant="outline-link" size="sm" onClick={this.handleClick}>see more</Button>
@@ -94,7 +94,7 @@ class MatchCard extends React.Component{
 
                     <Card id="cardRight"> 
                         <Card.Body>
-                     
+                            <h4>Preferences</h4>
                         </Card.Body>
                         <Card.Footer>
                             <Button id="see-more-btn" variant="outline-link" size="sm" onClick={this.handleClick}>back</Button>

@@ -8,32 +8,15 @@ import MatchBlock from './matchBlock';
 import NameAndPic from './username-and-pic'
 import RoomeLogo from './roomeLogo.component'
 import {Image, Button, Modal} from 'react-bootstrap';
+import axios from 'axios';
 import {setConfiguration, Row, Col, Container } from "react-grid-system";
 
-import ReactCardFlip from 'react-card-flip';
 
-import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 
 export default class Temp extends Component{
 
-    constructor(props) {
-        super();
-            this.state = {
-                isFlipped: false
-            };
-            this.handleClick = this.handleClick.bind(this);
     
-        //this.deleteExercise = this.deleteExercise.bind(this)
-    
-        this.state = {users: []};
-      }
-
-    handleClick(e) {
-        e.preventDefault();
-          this.setState(prevState => ({isFlipped: !prevState.isFlipped }));
-    }
 
     componentDidMount() {
         axios.get('http://localhost:5000/new-user/')
